@@ -12,7 +12,7 @@ export default function DoctorVideoShowcase({ onOpenAuditModal }) {
   const [activeVideo, setActiveVideo] = useState(0);
 
   return (
-    <section id="doctor-branding" className="relative py-24 bg-[#020A17] overflow-hidden">
+    <section id="doctor-branding" className="relative py-24 bg-[#01040A] overflow-hidden">
       
       {/* Background Ambient Glow */}
       <div className="absolute top-1/2 right-1/4 w-[500px] h-[500px] bg-gradient-to-l from-[#0EA5E9]/15 to-transparent blur-[140px] pointer-events-none" />

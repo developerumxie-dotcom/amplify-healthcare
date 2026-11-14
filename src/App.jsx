@@ -17,7 +17,7 @@ export default function App() {
   const closeAuditModal = () => setAuditModalOpen(false);
 
   return (
-    <div className="min-h-screen bg-[#020813] text-slate-100 font-sans selection:bg-[#0EA5E9]/30 selection:text-white relative">
+    <div className="min-h-screen bg-[#01040A] text-slate-100 font-sans selection:bg-[#0EA5E9]/30 selection:text-white relative">
       
       {/* Top Floating Glass Capsule Navbar */}
       <Navbar onOpenAuditModal={openAuditModal} />

@@ -38,7 +38,7 @@ export default function AuditIntakeForm() {
   };
 
   return (
-    <section id="audit-form" className="relative py-24 bg-[#020A17] overflow-hidden">
+    <section id="audit-form" className="relative py-24 bg-[#01040A] overflow-hidden">
       
       {/* Background Ambient Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[550px] bg-gradient-to-tr from-[#0EA5E9]/15 via-[#00E5FF]/8 to-transparent blur-[140px] pointer-events-none" />

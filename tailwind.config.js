@@ -7,13 +7,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: '#020813',
+        background: '#01040A',
         navy: {
-          950: '#020813',
-          900: '#030E1A',
-          850: '#06162A',
-          800: '#0A203C',
-          700: '#0F2F55',
+          950: '#01040A',
+          900: '#020712',
+          850: '#030E1E',
+          800: '#06172E',
+          700: '#0A2544',
         },
         cyan: {
           glow: '#00E5FF',
@@ -22,10 +22,10 @@ export default {
           dark: '#0284C7',
         },
         clinical: {
-          bg: '#020813',
-          panel: '#030E1A',
-          border: 'rgba(56, 189, 248, 0.18)',
-          glow: 'rgba(14, 165, 233, 0.35)',
+          bg: '#01040A',
+          panel: '#020712',
+          border: 'rgba(56, 189, 248, 0.16)',
+          glow: 'rgba(14, 165, 233, 0.30)',
         }
       },
       fontFamily: {

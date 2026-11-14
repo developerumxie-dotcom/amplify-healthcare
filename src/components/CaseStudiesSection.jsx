@@ -4,7 +4,7 @@ import { caseStudiesData } from '../data/healthcareData';
 
 export default function CaseStudiesSection({ onOpenAuditModal }) {
   return (
-    <section id="case-studies" className="relative py-24 bg-[#020813] overflow-hidden">
+    <section id="case-studies" className="relative py-24 bg-[#01040A] overflow-hidden">
       
       {/* Background Glow */}
       <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-gradient-to-tr from-[#0EA5E9]/15 to-transparent blur-[140px] pointer-events-none" />

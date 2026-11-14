@@ -13,7 +13,7 @@ export default function PatientAcquisitionEngine({ onOpenAuditModal }) {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section id="patient-funnel" className="relative py-24 bg-[#020A17] overflow-hidden">
+    <section id="patient-funnel" className="relative py-24 bg-[#01040A] overflow-hidden">
       
       {/* Background Ambient Lighting */}
       <div className="absolute top-1/3 right-10 w-[550px] h-[550px] bg-gradient-to-l from-[#0EA5E9]/15 to-transparent blur-[130px] pointer-events-none" />

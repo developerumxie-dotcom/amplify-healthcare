@@ -11,7 +11,7 @@ const iconMap = {
 
 export default function TrustBadgesSection() {
   return (
-    <section className="relative py-20 bg-[#020813] overflow-hidden">
+    <section className="relative py-20 bg-[#01040A] overflow-hidden">
       
       {/* Background Subtle Gradient Line */}
       <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-[#38BDF8]/20 to-transparent" />

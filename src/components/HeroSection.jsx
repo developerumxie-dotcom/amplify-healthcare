@@ -5,10 +5,10 @@ import HeroHeartVisual from './HeroHeartVisual';
 /**
  * AMPLIFY HEALTHCARE — HERO SECTION
  * 
- * 1:1 twin of Amplify Digital Hero Section layout:
- * - Volumetric clinical nebulae & horizon sweep SVG
+ * Twin 2-column layout with dark pitch-obsidian backdrop:
+ * - Ultra-deep clinical obsidian black (#01040A)
  * - Left column with pill badge, headline, subtitle, dual CTAs, mouse scroll
- * - Right column with breathing biometric heart canvas
+ * - Right column with signature 3D Glass Heart & ECG Three.js Visual
  */
 export default function HeroSection({ onOpenAuditModal }) {
   const scrollToSection = (e, sectionId) => {
@@ -25,46 +25,46 @@ export default function HeroSection({ onOpenAuditModal }) {
   };
 
   return (
-    <section id="home" className="relative min-h-[92vh] flex items-center pt-24 pb-16 lg:pt-28 lg:pb-20 overflow-hidden">
+    <section id="home" className="relative min-h-[92vh] flex items-center pt-24 pb-16 lg:pt-28 lg:pb-20 overflow-hidden bg-[#01040A]">
       
-      {/* ─── Background Atmospheric Volumetric Nebulae ─── */}
+      {/* ─── Background Atmospheric Volumetric Nebulae (Deep Obsidian Mood) ─── */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Deep cyan/sky glow around biometric heart */}
-        <div className="absolute top-[22%] right-[10%] w-[500px] h-[500px] rounded-full bg-gradient-to-br from-[#0EA5E9]/20 via-[#00E5FF]/10 to-transparent blur-[120px]" />
+        {/* Subtle cyan glow focused around 3D heart */}
+        <div className="absolute top-[20%] right-[8%] w-[450px] h-[450px] rounded-full bg-gradient-to-br from-[#0EA5E9]/14 via-[#00E5FF]/6 to-transparent blur-[110px]" />
         
-        {/* Deep clinical navy glow */}
-        <div className="absolute top-[10%] right-[30%] w-[600px] h-[600px] rounded-full bg-[#031C38]/40 blur-[140px]" />
+        {/* Deep pitch navy ambient shading */}
+        <div className="absolute top-[10%] right-[32%] w-[500px] h-[500px] rounded-full bg-[#020B18]/30 blur-[130px]" />
 
         {/* Ambient bottom sweep cyan glow */}
-        <div className="absolute -bottom-24 left-[20%] w-[650px] h-[350px] rounded-full bg-gradient-to-r from-[#0284C7]/20 to-[#00E5FF]/15 blur-[100px]" />
+        <div className="absolute -bottom-28 left-[18%] w-[600px] h-[320px] rounded-full bg-gradient-to-r from-[#0284C7]/12 to-[#00E5FF]/8 blur-[100px]" />
 
-        {/* Dark navy subtle haze behind headline for clean contrast */}
-        <div className="absolute top-[20%] left-[-10%] w-[600px] h-[500px] rounded-full bg-[#020B18]/90 blur-[80px]" />
+        {/* Deep obsidian vignette behind headline for 100% crisp contrast */}
+        <div className="absolute top-[18%] left-[-10%] w-[580px] h-[480px] rounded-full bg-[#000206]/95 blur-[90px]" />
       </div>
 
       {/* ─── Sparse Pinpoint Star/Micro Glint Particles ─── */}
       <div className="absolute inset-0 pointer-events-none">
-        <span className="absolute w-1 h-1 rounded-full bg-[#38BDF8] opacity-60 animate-ping" style={{ left: '50.3%', top: '24.4%', animationDuration: '4s' }} />
-        <span className="absolute w-1 h-1 rounded-full bg-[#00E5FF] opacity-50" style={{ left: '54.0%', top: '56.6%' }} />
-        <span className="absolute w-1.5 h-1.5 rounded-full bg-white opacity-70" style={{ left: '71.1%', top: '18.2%' }} />
-        <span className="absolute w-1 h-1 rounded-full bg-[#38BDF8] opacity-40 animate-pulse" style={{ left: '82.7%', top: '32.1%', animationDuration: '3s' }} />
-        <span className="absolute w-1.5 h-1.5 rounded-full bg-[#00E5FF] opacity-60" style={{ left: '89.4%', top: '52.6%' }} />
-        <span className="absolute w-1 h-1 rounded-full bg-white opacity-50" style={{ left: '94.5%', top: '26.3%' }} />
+        <span className="absolute w-1 h-1 rounded-full bg-[#38BDF8] opacity-50 animate-ping" style={{ left: '50.3%', top: '24.4%', animationDuration: '4s' }} />
+        <span className="absolute w-1 h-1 rounded-full bg-[#00E5FF] opacity-40" style={{ left: '54.0%', top: '56.6%' }} />
+        <span className="absolute w-1.5 h-1.5 rounded-full bg-white opacity-60" style={{ left: '71.1%', top: '18.2%' }} />
+        <span className="absolute w-1 h-1 rounded-full bg-[#38BDF8] opacity-35 animate-pulse" style={{ left: '82.7%', top: '32.1%', animationDuration: '3s' }} />
+        <span className="absolute w-1.5 h-1.5 rounded-full bg-[#00E5FF] opacity-50" style={{ left: '89.4%', top: '52.6%' }} />
+        <span className="absolute w-1 h-1 rounded-full bg-white opacity-40" style={{ left: '94.5%', top: '26.3%' }} />
       </div>
 
       {/* ─── SVG Decorative Lighting Trails & Horizon Waves ─── */}
       <svg
-        className="absolute inset-0 w-full h-full pointer-events-none opacity-85"
+        className="absolute inset-0 w-full h-full pointer-events-none opacity-80"
         viewBox="0 0 1024 454"
         preserveAspectRatio="none"
       >
         <defs>
           <linearGradient id="hcBottomWaveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0%" stopColor="#0369A1" stopOpacity="0" />
-            <stop offset="25%" stopColor="#0284C7" stopOpacity="0.8" />
-            <stop offset="60%" stopColor="#0EA5E9" stopOpacity="0.9" />
-            <stop offset="85%" stopColor="#38BDF8" stopOpacity="0.95" />
-            <stop offset="100%" stopColor="#00E5FF" stopOpacity="0.75" />
+            <stop offset="25%" stopColor="#0284C7" stopOpacity="0.75" />
+            <stop offset="60%" stopColor="#0EA5E9" stopOpacity="0.85" />
+            <stop offset="85%" stopColor="#38BDF8" stopOpacity="0.9" />
+            <stop offset="100%" stopColor="#00E5FF" stopOpacity="0.65" />
           </linearGradient>
 
           <filter id="hcWaveGlow" x="-10%" y="-40%" width="120%" height="180%">
@@ -88,15 +88,15 @@ export default function HeroSection({ onOpenAuditModal }) {
         />
       </svg>
 
-      {/* ─── Main Hero Content Grid (1:1 Twin 2-Column Split) ─── */}
+      {/* ─── Main Hero Content Grid (2-Column Split) ─── */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center">
 
           {/* Left Column: Headline, Copy & CTAs */}
-          <div className="lg:col-span-7 flex flex-col items-start text-left space-y-6 pt-4 lg:pt-0">
+          <div className="lg:col-span-6 flex flex-col items-start text-left space-y-6 pt-4 lg:pt-0">
 
             {/* Top Glass Pill Badge: Healthcare • Strategy • Growth */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#031122]/75 border border-[#38BDF8]/35 backdrop-blur-md shadow-[inset_0_1.5px_1px_0_rgba(255,255,255,0.40),0_4px_16px_rgba(14,165,233,0.22)]">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#020A16]/85 border border-[#38BDF8]/30 backdrop-blur-md shadow-[inset_0_1.5px_1px_0_rgba(255,255,255,0.35),0_4px_16px_rgba(14,165,233,0.18)]">
               <span className="w-2 h-2 rounded-full bg-[#00E5FF] animate-pulse shadow-[0_0_8px_#00E5FF]" />
               <span className="font-outfit text-xs sm:text-sm font-semibold tracking-wide text-cyan-200">
                 Healthcare • Strategy • Growth
@@ -139,7 +139,7 @@ export default function HeroSection({ onOpenAuditModal }) {
               <a
                 href="#case-studies"
                 onClick={(e) => scrollToSection(e, 'case-studies')}
-                className="group relative overflow-hidden px-6 sm:px-7 py-3.5 rounded-full font-outfit text-sm sm:text-base font-semibold text-slate-100 bg-[#031224]/75 border border-[#38BDF8]/30 backdrop-blur-md shadow-[inset_0_1.5px_1px_0_rgba(255,255,255,0.35),0_6px_20px_rgba(2,8,19,0.7)] hover:bg-[#06203D]/80 hover:border-[#38BDF8]/60 transition-all duration-200 transform hover:-translate-y-0.5 flex items-center justify-center gap-2.5"
+                className="group relative overflow-hidden px-6 sm:px-7 py-3.5 rounded-full font-outfit text-sm sm:text-base font-semibold text-slate-100 bg-[#020914]/85 border border-[#38BDF8]/25 backdrop-blur-md shadow-[inset_0_1.5px_1px_0_rgba(255,255,255,0.30),0_6px_20px_rgba(1,4,10,0.8)] hover:bg-[#031024]/90 hover:border-[#38BDF8]/50 transition-all duration-200 transform hover:-translate-y-0.5 flex items-center justify-center gap-2.5"
               >
                 {/* Specular Cut Line */}
                 <span className="absolute inset-x-3 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none" />
@@ -156,7 +156,7 @@ export default function HeroSection({ onOpenAuditModal }) {
 
             {/* Mouse Scroll Indicator */}
             <div className="pt-6 sm:pt-10 flex items-center gap-3 text-slate-400">
-              <div className="w-5 h-8 rounded-full border-2 border-slate-500/60 flex items-start justify-center p-1">
+              <div className="w-5 h-8 rounded-full border-2 border-slate-600/60 flex items-start justify-center p-1">
                 <span className="w-1 h-2 rounded-full bg-[#38BDF8] animate-bounce" />
               </div>
               <span className="text-xs tracking-wider uppercase font-medium font-sans text-slate-400">
@@ -165,8 +165,8 @@ export default function HeroSection({ onOpenAuditModal }) {
             </div>
           </div>
 
-          {/* Right Column: Lightweight Breathing Heartbeat Visual (Exact position of origami bird) */}
-          <div className="lg:col-span-5 relative w-full flex items-center justify-center">
+          {/* Right Column: Signature 3D Glass Heart & Traversing ECG Three.js Visual */}
+          <div className="lg:col-span-6 relative w-full flex items-center justify-center">
             <HeroHeartVisual />
           </div>
 
