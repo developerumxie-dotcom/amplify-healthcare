@@ -76,6 +76,16 @@ export default function Footer() {
                 </a>
               </li>
               <li>
+                <a 
+                  href="http://localhost:5174" 
+                  className="flex items-center gap-2.5 text-slate-400 hover:text-white transition-colors group"
+                >
+                  <span className="w-2 h-2 rounded-full bg-[#D946EF] group-hover:shadow-[0_0_8px_#D946EF]" />
+                  <span>Amplify Brands</span>
+                  <span className="text-[10px] text-slate-500 font-mono">:5174</span>
+                </a>
+              </li>
+              <li>
                 <div className="flex items-center gap-2.5 text-white font-semibold">
                   <span className="w-2 h-2 rounded-full bg-[#00E5FF] shadow-[0_0_10px_#00E5FF] animate-pulse" />
                   <span className="text-cyan-200">Amplify Healthcare</span>
@@ -87,7 +97,7 @@ export default function Footer() {
                   href="http://localhost:5176" 
                   className="flex items-center gap-2.5 text-slate-400 hover:text-white transition-colors group"
                 >
-                  <span className="w-2 h-2 rounded-full bg-[#EAB308] group-hover:shadow-[0_0_8px_#EAB308]" />
+                  <span className="w-2 h-2 rounded-full bg-[#00FF88] group-hover:shadow-[0_0_8px_#00FF88]" />
                   <span>Amplify Academy</span>
                   <span className="text-[10px] text-slate-500 font-mono">:5176</span>
                 </a>
