@@ -1,5 +1,6 @@
 import React from 'react';
-import { Mail, MapPin, Activity } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
+import { getAssetUrl } from '../utils/assetUrl';
 
 export default function Footer() {
   const scrollToSection = (e, sectionId) => {
@@ -16,7 +17,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-[#000206] border-t border-[#38BDF8]/15 pt-16 pb-12 overflow-hidden">
+    <footer className="relative bg-transparent pt-16 pb-12 overflow-hidden">
       
       {/* Ambient Top Glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[150px] bg-gradient-to-b from-[#0EA5E9]/10 to-transparent blur-[80px] pointer-events-none" />
@@ -31,23 +32,14 @@ export default function Footer() {
             <a 
               href="#home" 
               onClick={(e) => scrollToSection(e, 'home')} 
-              className="inline-flex items-center gap-3 group"
+              className="inline-flex items-center group"
               aria-label="Amplify Healthcare Home"
             >
-              <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-[#0EA5E9]/30 to-[#00E5FF]/10 border border-[#38BDF8]/40 shadow-[0_0_15px_rgba(0,229,255,0.35)]">
-                <Activity className="w-5 h-5 text-[#38BDF8] group-hover:text-white transition-colors" />
-              </div>
-              <div className="flex flex-col">
-                <div className="flex items-center gap-1.5 font-outfit text-lg font-extrabold tracking-tight text-white">
-                  <span>AMPLIFY</span>
-                  <span className="text-[#38BDF8] tracking-widest text-xs font-bold uppercase px-1.5 py-0.5 rounded bg-[#0EA5E9]/15 border border-[#38BDF8]/30">
-                    HEALTHCARE
-                  </span>
-                </div>
-                <span className="text-[10px] tracking-wider text-slate-400 font-sans">
-                  Specialized Medical & Hospital Marketing
-                </span>
-              </div>
+              <img 
+                src={getAssetUrl('assets/amplify-healthcare-logo.png')} 
+                alt="Amplify Healthcare - Healthcare Marketing Specialists" 
+                className="h-12 sm:h-14 md:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.03] filter drop-shadow-[0_2px_14px_rgba(0,229,255,0.25)]"
+              />
             </a>
 
             <p className="font-outfit text-sm font-semibold tracking-wide text-cyan-200">
@@ -114,11 +106,6 @@ export default function Footer() {
               <li>
                 <a href="#specializations" onClick={(e) => scrollToSection(e, 'specializations')} className="hover:text-[#38BDF8] transition-colors">
                   Specializations
-                </a>
-              </li>
-              <li>
-                <a href="#patient-funnel" onClick={(e) => scrollToSection(e, 'patient-funnel')} className="hover:text-[#38BDF8] transition-colors">
-                  Patient Funnel
                 </a>
               </li>
               <li>

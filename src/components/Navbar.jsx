@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Menu, X, Activity } from 'lucide-react';
+import { ArrowRight, Menu, X } from 'lucide-react';
+import { getAssetUrl } from '../utils/assetUrl';
 
 export default function Navbar({ onOpenAuditModal }) {
   const [scrolled, setScrolled] = useState(false);
@@ -32,7 +33,7 @@ export default function Navbar({ onOpenAuditModal }) {
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3 md:py-4 ${scrolled ? 'py-2.5 md:py-3' : ''}`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-2 sm:py-2.5 md:py-3 ${scrolled ? 'py-1.5 md:py-2' : ''}`}>
       {/* Seamless Faded Glass Blur Backdrop (feather-soft vertical gradient fade) */}
       <div 
         className={`absolute inset-0 pointer-events-none transition-opacity duration-300 bg-gradient-to-b from-[#020813]/90 via-[#020813]/60 to-transparent backdrop-blur-md ${
@@ -46,26 +47,14 @@ export default function Navbar({ onOpenAuditModal }) {
         <a 
           href="#home" 
           onClick={(e) => scrollToSection(e, 'home')} 
-          className="group flex items-center gap-2.5 sm:gap-3 text-decoration-none focus:outline-none"
+          className="group flex items-center text-decoration-none focus:outline-none -ml-2 sm:-ml-4 md:-ml-6 lg:-ml-8"
           aria-label="Amplify Healthcare Home"
         >
-          {/* Glowing Medical Pulse Badge */}
-          <div className="relative flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-[#0EA5E9]/25 to-[#00E5FF]/10 border border-[#38BDF8]/40 shadow-[0_0_15px_rgba(0,229,255,0.35)] transition-all duration-300 group-hover:shadow-[0_0_22px_rgba(0,229,255,0.6)] group-hover:border-[#38BDF8]/80">
-            <span className="absolute inset-0 rounded-xl bg-gradient-to-b from-white/30 to-transparent opacity-60 pointer-events-none" />
-            <Activity className="w-5 h-5 text-[#38BDF8] group-hover:text-white transition-colors animate-pulse" />
-          </div>
-
-          <div className="flex flex-col">
-            <div className="flex items-center gap-1.5 font-outfit text-base sm:text-lg font-extrabold tracking-tight text-white leading-none">
-              <span>AMPLIFY</span>
-              <span className="text-[#38BDF8] tracking-widest text-[11px] sm:text-xs font-bold uppercase px-1.5 py-0.5 rounded bg-[#0EA5E9]/15 border border-[#38BDF8]/30">
-                HEALTHCARE
-              </span>
-            </div>
-            <span className="text-[10px] tracking-wider text-slate-400 font-sans mt-0.5 font-medium hidden sm:inline-block">
-              Hospital & Medical Marketing
-            </span>
-          </div>
+          <img 
+            src={getAssetUrl('assets/amplify-healthcare-logo.png')} 
+            alt="Amplify Healthcare - Healthcare Marketing Specialists" 
+            className="h-14 sm:h-16 md:h-20 lg:h-[84px] w-auto object-contain transition-transform duration-300 group-hover:scale-[1.03] filter drop-shadow-[0_2px_14px_rgba(0,229,255,0.28)]"
+          />
         </a>
 
         {/* Center Floating Glass Capsule Navigation */}
@@ -95,11 +84,11 @@ export default function Navbar({ onOpenAuditModal }) {
             </a>
 
             <a 
-              href="#patient-funnel" 
-              onClick={(e) => scrollToSection(e, 'patient-funnel')} 
+              href="#work" 
+              onClick={(e) => scrollToSection(e, 'work')} 
               className="px-3.5 py-1.5 text-xs font-semibold tracking-wide text-slate-300 hover:text-white hover:bg-white/5 rounded-full transition-all duration-200"
             >
-              Patient Funnel
+              Selected Work
             </a>
 
             <a 
@@ -166,11 +155,11 @@ export default function Navbar({ onOpenAuditModal }) {
             Specializations
           </a>
           <a 
-            href="#patient-funnel" 
-            onClick={(e) => scrollToSection(e, 'patient-funnel')}
+            href="#work" 
+            onClick={(e) => scrollToSection(e, 'work')}
             className="block px-3 py-2 text-sm font-semibold text-slate-200 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
           >
-            Patient Funnel
+            Selected Work
           </a>
           <a 
             href="#case-studies" 

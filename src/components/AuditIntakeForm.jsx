@@ -38,10 +38,10 @@ export default function AuditIntakeForm() {
   };
 
   return (
-    <section id="audit-form" className="relative py-24 bg-[#01040A] overflow-hidden">
+    <section id="audit-form" className="relative py-24 bg-transparent overflow-hidden">
       
-      {/* Background Ambient Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[550px] bg-gradient-to-tr from-[#0EA5E9]/15 via-[#00E5FF]/8 to-transparent blur-[140px] pointer-events-none" />
+      {/* Background Ambient Glow (Smoothly masked to eliminate hard cut-off lines) */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[550px] bg-gradient-to-tr from-[#0EA5E9]/15 via-[#00E5FF]/8 to-transparent blur-[140px] pointer-events-none [mask-image:radial-gradient(ellipse_at_center,black_35%,transparent_70%)]" />
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         

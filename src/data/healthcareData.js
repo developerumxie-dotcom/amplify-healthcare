@@ -2,20 +2,20 @@ export const specializationsData = [
   {
     id: 'hospitals',
     title: 'Multispecialty Hospitals',
-    subtitle: 'Tertiary Care & Emergency Lead Generation',
-    description: 'Scalable IPD patient bed occupancy, superspecialty OPD appointment funnels, and 24/7 trauma & emergency department digital visibility.',
+    subtitle: 'Tertiary Care & Emergency Funnels',
+    description: 'Maximize in-patient bed occupancy, fill superspecialty OPD slots, and dominate local 24/7 trauma and emergency searches.',
     metric: '+280% IPD Bed Growth',
     tag: 'Hospital Infrastructure',
     iconName: 'Building2',
     gradient: 'from-sky-500/20 via-cyan-500/10 to-transparent',
-    features: ['Emergency Room Digital Geofencing', 'Superspecialty OPD Booking', 'Insurance & TPA Patient Desks']
+    features: ['Emergency Room Geofencing', 'Superspecialty OPD Booking', 'Insurance & Cashless TPA Desks']
   },
   {
     id: 'ivf',
-    title: 'IVF & Fertility Clinics',
+    title: 'IVF & Fertility Centers',
     subtitle: 'High-Empathy Consultation Funnels',
-    description: 'Empathetic, stigma-free counseling funnels that guide hopeful parents with educational webinars, transparent pricing breakdowns, and real miracle stories.',
-    metric: '42% Lower CPL',
+    description: 'Empathetic counseling funnels that guide hopeful parents with educational webinars, transparent pricing breakdowns, and real patient stories.',
+    metric: '42% Lower Cost Per Consult',
     tag: 'Reproductive Medicine',
     iconName: 'Baby',
     gradient: 'from-teal-500/20 via-cyan-500/10 to-transparent',
@@ -23,36 +23,47 @@ export const specializationsData = [
   },
   {
     id: 'cosmetic-dental',
-    title: 'Cosmetic & Dental Practices',
+    title: 'Cosmetic & Dental Clinics',
     subtitle: 'High-Ticket Elective Conversions',
-    description: 'Digital smile makeover and aesthetic surgery acquisition loops featuring before/after interactive sliders, virtual smile simulations, and luxury patient consultations.',
-    metric: '3.4x Elective ROI',
+    description: 'Digital smile makeovers and aesthetic surgery acquisition loops featuring before/after showcases, virtual smile consultations, and easy financing.',
+    metric: '3.4x Elective Treatment ROI',
     tag: 'Aesthetic & Dental',
     iconName: 'Sparkles',
     gradient: 'from-blue-500/20 via-cyan-500/10 to-transparent',
-    features: ['Virtual Smile Consultations', 'Before/After Treatment Sliders', 'Financing & EMI Calculators']
+    features: ['Virtual Smile Consultations', 'Before/After Treatment Sliders', 'Flexible EMI & Financing Desks']
   },
   {
     id: 'ortho-cardio',
     title: 'Orthopedics & Cardiology',
-    subtitle: 'High-Value Surgical Lead Flow',
-    description: 'Search intent capture for robotic knee replacements, minimally invasive cardiac surgeries, bypass procedures, and rehabilitation packages.',
+    subtitle: 'High-Value Surgical Patient Flow',
+    description: 'High-intent search capture for robotic joint replacements, minimally invasive cardiac surgeries, and advanced rehabilitation care.',
     metric: '180+ Monthly Surgeries',
     tag: 'Surgical Excellence',
     iconName: 'Activity',
     gradient: 'from-cyan-500/20 via-blue-500/10 to-transparent',
-    features: ['Robotic Surgery Authority', 'Symptom-To-Surgeon Pathways', 'Second Opinion Portals']
+    features: ['Robotic Surgery Authority', 'Symptom-To-Surgeon Pathways', 'Second Opinion Tele-Portals']
   },
   {
     id: 'doctor-branding',
     title: 'Doctor Personal Branding',
-    subtitle: 'Surgeon & Specialist Thought Leadership',
-    description: 'Turn renowned physicians and surgeons into regional and national authorities through cinematic clinical video reels, podcast series, and verified PR.',
-    metric: '1.2M+ Patient Views',
+    subtitle: 'Surgeon & Specialist Authority',
+    description: 'Turn renowned surgeons and medical specialists into regional and national authorities through cinematic clinical reels and verified PR.',
+    metric: '1.2M+ Annual Patient Views',
     tag: 'Doctor Authority',
     iconName: 'Award',
     gradient: 'from-sky-500/20 via-indigo-500/10 to-transparent',
-    features: ['Clinical Reels & Podcasts', 'Google Scholar & Wikipedia PR', 'Conference Keynote Packaging']
+    features: ['Cinematic Clinical Video Reels', 'Google Scholar & Verified Media PR', 'Medical Keynote Packaging']
+  },
+  {
+    id: 'custom-specialty',
+    title: 'Other Super-Specialties',
+    subtitle: 'Oncology, Neurology & Pediatrics',
+    description: 'Tailored patient acquisition funnels engineered for oncology centers, pediatric institutes, neurology practices, and day-care surgical facilities.',
+    metric: '100% Custom Protocol',
+    tag: 'Specialized Departments',
+    iconName: 'Stethoscope',
+    gradient: 'from-cyan-500/20 via-teal-500/10 to-transparent',
+    features: ['Medical Ethics & Board Compliant', 'Department-Specific Funnels', 'Dedicated Healthcare Strategist']
   }
 ];
 
@@ -120,16 +131,19 @@ export const caseStudiesData = [
     id: 'apex-heart',
     client: 'Apex Heart Institute',
     category: 'Super-Specialty Cardiac Hospital',
+    department: 'Cardiology & Cardiac Surgery',
     location: 'Ahmedabad & Mumbai',
     highlight: '+240% Elective Surgeries',
-    period: '90-Day Campaign Window',
-    summary: 'Restructured the cardiac patient funnel with hyper-targeted symptom awareness campaigns, robotic angioplasty video reels, and 24/7 emergency response integration.',
+    period: '90-Day Implementation',
+    challenge: 'Relied heavily on offline physician referrals; patients were unaware of their minimally invasive robotic angioplasty department.',
+    solution: 'Launched symptom-level Google intent capture, robotic procedural explainer reels, and a 24/7 emergency WhatsApp triage system.',
+    summary: 'Restructured the cardiac patient funnel with robotic angioplasty explainer reels, search intent capture, and 24/7 emergency response triage.',
     stats: [
-      { label: 'Elective Consults', value: '+240%', change: 'from 85 to 289/mo' },
-      { label: 'Emergency Admissions', value: '+78%', change: 'via local geofencing' },
-      { label: 'Cost Per Consult', value: '-38%', change: 'high-intent search' }
+      { label: 'Elective Surgeries', value: '+240%', change: '85 → 289/month' },
+      { label: 'Emergency Admissions', value: '+78%', change: 'Via local geofence' },
+      { label: 'Cost Per Inpatient', value: '-38%', change: 'High-intent search traffic' }
     ],
-    quote: '"Amplify transformed our hospital marketing from generic brochures to a high-precision surgical patient pipeline."',
+    quote: '"Amplify transformed our hospital marketing from generic brochures to a high-precision, ethical surgical patient pipeline."',
     doctorName: 'Dr. Rajesh Patel',
     doctorTitle: 'Chief Interventional Cardiologist & Medical Director'
   },
@@ -137,16 +151,19 @@ export const caseStudiesData = [
     id: 'bloom-ivf',
     client: 'Bloom Fertility & IVF Centers',
     category: 'Chain of 6 IVF Centers',
+    department: 'Reproductive Medicine & IVF',
     location: 'Delhi NCR & Bengaluru',
     highlight: '620+ Monthly Consults',
     period: '6-Month Growth Loop',
-    summary: 'Built high-empathy fertility education webinars, transparent EMI treatment packages, and private counselor WhatsApp funnels for couples navigating infertility.',
+    challenge: 'High drop-off on cold lead forms; couples felt uncomfortable and rushed by aggressive, non-clinical sales calls.',
+    solution: 'Replaced cold outreach with educational fertility webinars, transparent pricing breakdowns, and private counselor-led WhatsApp chats.',
+    summary: 'Built high-empathy fertility education webinars, transparent treatment packages, and private counselor WhatsApp funnels for couples navigating infertility.',
     stats: [
-      { label: 'Monthly Inquiries', value: '620+', change: 'verified prospective couples' },
-      { label: 'Patient Acquisition Cost', value: '-42%', change: 'below industry benchmark' },
-      { label: 'Clinical OPD Conversion', value: '31%', change: 'from initial counselor chat' }
+      { label: 'Monthly Consults', value: '620+', change: 'Verified prospective couples' },
+      { label: 'Patient Acq. Cost', value: '-42%', change: 'Below industry benchmark' },
+      { label: 'OPD Turnout Rate', value: '31%', change: 'From counselor triage' }
     ],
-    quote: '"The empathy and clinical understanding Amplify brought to our fertility campaigns was unmatched in our industry."',
+    quote: '"The empathy, patient dignity, and clinical accuracy Amplify brought to our fertility campaigns was unmatched in our industry."',
     doctorName: 'Dr. Ananya Sharma',
     doctorTitle: 'Senior Reproductive Endocrinologist'
   },
@@ -154,14 +171,17 @@ export const caseStudiesData = [
     id: 'dr-mehta',
     client: 'Dr. Mehta Orthopedics',
     category: 'Robotic Joint Replacement Clinic',
+    department: 'Robotic Orthopedic Surgery',
     location: 'Hyderabad',
-    highlight: '#1 Robotic Surgeon',
+    highlight: '#1 Robotic Joint Authority',
     period: '12-Month Authority Build',
-    summary: 'Established Dr. Mehta as South India’s leading robotic knee surgeon through clinical explainer reels, live surgical Q&A broadcasts, and Google 3-Pack domination.',
+    challenge: 'Severe patient fear surrounding knee replacement recovery; heavy competition from large corporate tertiary hospitals.',
+    solution: 'Produced 30+ cinematic "Ask The Surgeon" recovery reels, dominated Google Map 3-Pack rankings, and launched a 2nd opinion portal.',
+    summary: 'Established Dr. Mehta as South India’s leading robotic knee surgeon through clinical explainer reels, surgical Q&A broadcasts, and Google 3-Pack domination.',
     stats: [
-      { label: 'Google Search Rank', value: '#1', change: 'for Robotic Knee Surgery' },
-      { label: 'Patient Video Views', value: '4.2M+', change: 'across YouTube & Instagram' },
-      { label: 'Outstation Patients', value: '45%', change: 'traveling from other states' }
+      { label: 'Google Search Rank', value: '#1', change: 'Robotic knee surgery intent' },
+      { label: 'Patient Video Views', value: '4.2M+', change: 'Across YouTube & Instagram' },
+      { label: 'Outstation Patients', value: '45%', change: 'Traveling from other states' }
     ],
     quote: '"Patients now walk into my OPD having already watched 5 of my surgical explainers. Trust is 100% established before I even speak."',
     doctorName: 'Dr. Vikram Mehta, MS Ortho',
@@ -234,4 +254,100 @@ export const trustBadgesData = [
     iconName: 'Award',
     badge: 'Board Certified Only'
   }
+];
+
+export const healthcareClientLogos = [
+  { id: 'apollo-clinic', name: 'Apollo Clinic', logo: '/assets/clients/apollo-clinic.png', height: 46 },
+  { id: 'indira-ivf', name: 'Indira IVF', logo: '/assets/clients/indira-ivf.png', height: 46 },
+  { id: 'shree-medishine', name: 'Shree Medishine Hospital', logo: '/assets/clients/shree-medishine.png', height: 46 },
+  { id: '2050-healthcare', name: '2050 Healthcare', logo: '/assets/clients/2050-healthcare.png', height: 46 },
+  { id: 'smile-train', name: 'Smile Train', logo: '/assets/clients/smile-train.png', height: 46 },
+  { id: 'dims-raipur', name: 'Daga Institute of Medical Sciences (DIMS)', logo: '/assets/clients/dims-raipur.png', height: 46 },
+  { id: 'meditrina', name: 'Meditrina Hospital India', logo: '/assets/clients/meditrina.png', height: 46 },
+  { id: 'universal-india', name: 'Universal India Hospital', logo: '/assets/clients/universal-india.png', height: 46 },
+  { id: 'global-healthcare', name: 'Global Healthcare', logo: '/assets/clients/global-healthcare.png', height: 46 },
+  { id: 'udbhav', name: 'Udbhav Physiotherapy & Rehab', logo: '/assets/clients/udbhav.png', height: 46 },
+  { id: 'suvidha', name: 'Suvidha Hospitals', logo: '/assets/clients/suvidha.png', height: 46 },
+  { id: 'best-hospitals', name: 'Best Hospitals in India', logo: '/assets/clients/best-hospitals.png', height: 46 },
+  { id: 'ananta', name: 'Ananta Multispeciality Hospital', logo: '/assets/clients/ananta.png', height: 46 },
+  { id: 'prime-hospitals', name: 'Prime Indian Hospitals', logo: '/assets/clients/prime-hospitals.png', height: 46 },
+  { id: 'himalaya', name: 'Himalaya Hospitals', logo: '/assets/clients/himalaya.png', height: 46 },
+  { id: 'shri-ganpati', name: 'Shri Ganpati Super Speciality Hospital', logo: '/assets/clients/shri-ganpati.png', height: 46 },
+  { id: 'fortis', name: 'Fortis Vadapalani', logo: '/assets/clients/fortis.png', height: 46 },
+  { id: 'isis-hospital', name: 'Isis International Hospital', logo: '/assets/clients/isis-hospital.png', height: 46 },
+  { id: 'vidya-hospital', name: 'Vidya Hospital', logo: '/assets/clients/vidya-hospital.png', height: 46 },
+  { id: 'continental-ccsh', name: 'Continental Chhattisgarh', logo: '/assets/clients/continental-ccsh.png', height: 46 }
+];
+
+export const healthcareSelectedWorks = [
+  {
+    id: 'apex-cardiac-robotic',
+    title: 'Apex Cardiac Robotic Center',
+    client: 'Apex Heart Institute',
+    category: 'Surgical & Hospitals',
+    description: 'High-intent robotic angioplasty search capture, 24/7 emergency trauma geofencing, and surgical bypass patient funnels.',
+    image: '/assets/portfolio/work_cardiac_surgery.jpg',
+    accentColor: '#00E5FF',
+    tags: ['Robotic Angioplasty', 'Emergency Geofence', 'Google 3-Pack'],
+  },
+  {
+    id: 'bloom-fertility-funnel',
+    title: 'Bloom IVF Empathy Funnels',
+    client: 'Bloom Fertility & IVF Centers',
+    category: 'Specialty Clinics',
+    description: 'High-empathy patient consultation journey, educational fertility webinars, and private WhatsApp counselor triage across 6 centers.',
+    image: '/assets/portfolio/work_ivf_fertility.png',
+    accentColor: '#EC4899',
+    tags: ['IVF Counseling', 'WhatsApp Triage', 'Empathy Webinars'],
+  },
+  {
+    id: 'mehta-robotic-ortho',
+    title: 'Dr. Mehta Robotic Joint Authority',
+    client: 'Dr. Mehta Orthopedics',
+    category: 'Doctor Branding',
+    description: 'Surgeon thought leadership campaign featuring 30+ cinematic 4K clinical explainer reels and national 2nd-opinion portal.',
+    image: '/assets/portfolio/work_ortho_robotic.jpg',
+    accentColor: '#38BDF8',
+    tags: ['Surgeon Branding', '4K Clinical Reels', 'Second Opinion'],
+  },
+  {
+    id: 'vidya-multispecialty-rebrand',
+    title: 'Vidya Tertiary Hospital Infrastructure',
+    client: 'Vidya Multispeciality Hospital',
+    category: 'Surgical & Hospitals',
+    description: 'Complete digital patient acquisition engine for a 150-bed tertiary hospital, automated HMS OPD slot booking, and cashless TPA desks.',
+    image: '/assets/portfolio/work_hospital_building.jpg',
+    accentColor: '#10B981',
+    tags: ['150-Bed IPD Growth', 'HMS Integration', 'Cashless TPA Desks'],
+  },
+  {
+    id: 'aura-cosmetic-dental',
+    title: 'Aura Dental Smile Makeovers',
+    client: 'Aura Dental & Cosmetic Centers',
+    category: 'Specialty Clinics',
+    description: 'Virtual smile simulation consultation loop, before/after procedural sliders, and flexible 0%-EMI elective patient financing.',
+    image: '/assets/portfolio/work_cosmetic_dental.jpg',
+    accentColor: '#A855F7',
+    tags: ['Smile Makeovers', 'Before/After Sliders', 'EMI Financing'],
+  },
+  {
+    id: 'continental-neuro-oncology',
+    title: 'Continental Neuro & Oncology Hub',
+    client: 'Continental Healthcare Systems',
+    category: 'Surgical & Hospitals',
+    description: 'Multidisciplinary oncology and neurosurgery patient referral networks, cancer screening camps, and clinical tumor board showcases.',
+    image: '/assets/portfolio/work_oncology_neuro.jpg',
+    accentColor: '#F59E0B',
+    tags: ['Oncology Screening', 'Neurosurgery Referral', 'Tumor Board PR'],
+  },
+  {
+    id: 'apollo-pediatric-wellness',
+    title: 'Apollo Pediatric & Neonatal Wing',
+    client: 'Apollo Children\'s Hospitals',
+    category: 'Specialty Clinics',
+    description: '24/7 pediatric emergency triage ads, neonatal ICU virtual walk-through tours, and parental developmental milestone health guides.',
+    image: '/assets/portfolio/work_pediatric_nicu.jpg',
+    accentColor: '#06B6D4',
+    tags: ['24/7 NICU Triage', 'Virtual ICU Tours', 'Parent Care Loops'],
+  },
 ];
