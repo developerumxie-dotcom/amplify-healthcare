@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PageLoader from './components/PageLoader/PageLoader';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import ContinuousHealthcareBackground from './components/ContinuousHealthcareBackground';
@@ -21,7 +22,9 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#01040A] text-slate-100 font-sans selection:bg-[#0EA5E9]/30 selection:text-white relative flex flex-col">
-      
+      {/* ── Premium Animated Preloader Screen (Pixel-Accurate UI Recreation) ── */}
+      <PageLoader />
+
       {/* Background Cosmic Starfield / Light Gradients for Hero */}
       <div className="fixed inset-0 pointer-events-none z-0">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-screen h-[900px] bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(14,165,233,0.16),transparent)]" />

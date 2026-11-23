@@ -1,0 +1,335 @@
+/* ==========================================================================
+   AMPLIFY HEALTHCARE — PREMIUM RESPONSIVE PRELOADER CSS MODULE
+   Pixel-Accurate UI Recreation | Desktop + Tablet + Mobile
+   ========================================================================== */
+
+:root {
+  --loader-bg-deep: #010817;
+  --loader-bg-midnight: #020B1B;
+  --loader-cyan: #38BDF8;
+  --loader-cyan-bright: #00E5FF;
+  --loader-blue-mid: #0284C7;
+  --loader-white-glow: #E0F7FF;
+}
+
+/* ── Fullscreen Overlay Wrapper ── */
+.loaderWrapper {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  z-index: 999999;
+  background-color: var(--loader-bg-deep);
+  background: radial-gradient(
+    circle at 50% 50%,
+    #031633 0%,
+    #020E22 45%,
+    #010817 80%,
+    #010510 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  user-select: none;
+  pointer-events: all;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.42s cubic-bezier(0.4, 0, 0.2, 1),
+              visibility 0.42s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* CSS Variables for Desktop (>= 1200px) */
+  --ring-size: 236px;
+  --bird-size: 114px;
+  --dot-size: 5.5px;
+  --dots-gap: 14px;
+  --dots-margin-top: 38px;
+  --corner-size: 580px;
+}
+
+/* Smooth exit dissolve into the hero section */
+.loaderWrapper.isExiting {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* ── Atmospheric Ambient Radial Overlay ── */
+.atmosphereOverlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  background:
+    radial-gradient(ellipse 45% 35% at 5% 5%, rgba(0, 229, 255, 0.12) 0%, transparent 70%),
+    radial-gradient(ellipse 45% 35% at 95% 95%, rgba(0, 229, 255, 0.12) 0%, transparent 70%),
+    radial-gradient(circle at 50% 50%, rgba(2, 132, 199, 0.05) 0%, transparent 60%);
+}
+
+/* ── 1. Top-Left Luminous Curved Gradient Container ── */
+.cornerTL {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--corner-size);
+  height: var(--corner-size);
+  pointer-events: none;
+  z-index: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* ── 2. Bottom-Right Luminous Curved Gradient Container ── */
+.cornerBR {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: var(--corner-size);
+  height: var(--corner-size);
+  pointer-events: none;
+  z-index: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.curveSvg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+/* ── 3. Centerpiece Composition (Ring, Bird, Dots) ── */
+.loaderCenter {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translate3d(0, 0, 0);
+}
+
+/* ── Circular Ring Outer Container ── */
+.ringContainer {
+  position: relative;
+  width: var(--ring-size);
+  height: var(--ring-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Static base circular guide stroke */
+.ringTrack {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid rgba(56, 189, 248, 0.22);
+  box-shadow: 
+    0 0 12px rgba(56, 189, 248, 0.12) inset,
+    0 0 12px rgba(56, 189, 248, 0.12);
+  pointer-events: none;
+}
+
+/* High-speed rotating neon conic gradient ring */
+.ringSpinner {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: rotateClockwise 2s linear infinite;
+  
+  /* Conic luminous sweep */
+  background: conic-gradient(
+    from 20deg,
+    transparent 0deg,
+    transparent 110deg,
+    rgba(2, 132, 199, 0.15) 160deg,
+    rgba(14, 165, 233, 0.45) 230deg,
+    rgba(56, 189, 248, 0.95) 310deg,
+    #00E5FF 345deg,
+    #FFFFFF 360deg
+  );
+
+  /* Mask out center to leave a crisp 2.5px ring */
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - 2.5px),
+    #FFFFFF calc(100% - 2.5px)
+  );
+  mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - 2.5px),
+    #FFFFFF calc(100% - 2.5px)
+  );
+
+  filter: drop-shadow(0 0 6px rgba(0, 229, 255, 0.85))
+          drop-shadow(0 0 14px rgba(56, 189, 248, 0.45));
+}
+
+/* Bright luminous leading white-cyan tip on the ring */
+.ringHead {
+  position: absolute;
+  top: -1.2px;
+  right: calc(50% - 3px);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  box-shadow:
+    0 0 6px 1.5px #FFFFFF,
+    0 0 14px 3px #00E5FF,
+    0 0 24px 6px rgba(56, 189, 248, 0.7);
+}
+
+/* ── Centered Stationary Amplify Origami Bird ── */
+.birdWrapper {
+  position: relative;
+  z-index: 5;
+  width: var(--bird-size);
+  height: var(--bird-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.birdLogo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  user-select: none;
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.5));
+  animation: birdMicroBreathe 3.5s ease-in-out infinite alternate;
+}
+
+/* ── 4. Three Centered Glowing Dots ── */
+.dotsContainer {
+  margin-top: var(--dots-margin-top);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--dots-gap);
+  pointer-events: none;
+}
+
+.dot {
+  width: var(--dot-size);
+  height: var(--dot-size);
+  border-radius: 50%;
+  background-color: #0284C7;
+  opacity: 0.35;
+  transform: scale(0.92);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: dotSequentialPulse 1.4s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.28s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.56s;
+}
+
+/* ── Keyframe Animations ── */
+@keyframes rotateClockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes birdMicroBreathe {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  100% {
+    transform: translateY(-2px) scale(1.015);
+  }
+}
+
+@keyframes dotSequentialPulse {
+  0%, 100% {
+    background-color: #0284C7;
+    opacity: 0.32;
+    transform: scale(0.9);
+    box-shadow: none;
+  }
+  50% {
+    background-color: #FFFFFF;
+    opacity: 1;
+    transform: scale(1.25);
+    box-shadow:
+      0 0 6px 1.5px #FFFFFF,
+      0 0 12px 3px #00E5FF,
+      0 0 18px 5px rgba(56, 189, 248, 0.5);
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS (Desktop, Tablet Landscape, Tablet Portrait, Mobile)
+   ========================================================================== */
+
+/* 7.2 Tablet Landscape: 900px – 1199px */
+@media (max-width: 1199px) and (min-width: 900px) {
+  .loaderWrapper {
+    --ring-size: 218px;
+    --bird-size: 106px;
+    --dot-size: 5px;
+    --dots-gap: 13px;
+    --dots-margin-top: 34px;
+    --corner-size: 480px;
+  }
+}
+
+/* 7.3 Tablet Portrait: 600px – 899px */
+@media (max-width: 899px) and (min-width: 600px) {
+  .loaderWrapper {
+    --ring-size: 196px;
+    --bird-size: 96px;
+    --dot-size: 5px;
+    --dots-gap: 12px;
+    --dots-margin-top: 30px;
+    --corner-size: 380px;
+  }
+}
+
+/* 7.4 Mobile: 360px – 599px (and very small screens < 360px) */
+@media (max-width: 599px) {
+  .loaderWrapper {
+    --ring-size: 162px;
+    --bird-size: 80px;
+    --dot-size: 4.5px;
+    --dots-gap: 10px;
+    --dots-margin-top: 26px;
+    --corner-size: 270px;
+  }
+}
+
+/* Accessibility: Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .ringSpinner {
+    animation-duration: 6s;
+  }
+  .birdLogo {
+    animation: none;
+  }
+  .dot {
+    animation: none;
+    opacity: 0.7;
+    background-color: var(--loader-cyan);
+  }
+  .dot:nth-child(2) {
+    opacity: 1;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 8px #00E5FF;
+  }
+}
