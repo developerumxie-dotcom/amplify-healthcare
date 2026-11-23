@@ -207,13 +207,27 @@ export default function Footer() {
 
         {/* Bottom Sub-Bar */}
         <div className="pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400 font-sans">
-          <p>© 2026 Amplify Healthcare • A division of Amplify Digital Services. All rights reserved.</p>
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 text-center sm:text-left">
+            <p>© 2026 Amplify Healthcare • A division of Amplify Digital Services. All rights reserved.</p>
+            <span className="hidden sm:inline text-slate-600">•</span>
+            <p className="text-slate-400">
+              Designed &amp; Developed by{' '}
+              <a
+                href="https://www.instagram.com/dev.umxie/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#38BDF8] hover:text-[#00E5FF] font-semibold transition-all duration-200 hover:underline hover:drop-shadow-[0_0_8px_rgba(0,229,255,0.6)]"
+              >
+                developer-umxie
+              </a>
+            </p>
+          </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3 sm:gap-4">
             <a href="#" className="hover:text-slate-200 transition-colors">Privacy Policy</a>
-            <span>•</span>
+            <span className="text-slate-600">•</span>
             <a href="#" className="hover:text-slate-200 transition-colors">Medical Compliance</a>
-            <span>•</span>
+            <span className="text-slate-600">•</span>
             <a href="#" className="hover:text-slate-200 transition-colors">Terms of Service</a>
           </div>
         </div>
