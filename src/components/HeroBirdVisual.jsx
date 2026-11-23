@@ -63,10 +63,39 @@ export default function HeroBirdVisual() {
 
     const scene = new THREE.Scene();
 
-    // ── Camera (Exact calibrated hero perspective: Z = 9.6, FOV = 36) ─
+    // ── Camera with Dynamic Responsive Framing (Zero clipping on Mobile, Tablet & Desktop) ─
     const camera = new THREE.PerspectiveCamera(36, width / height, 0.1, 100);
     camera.position.set(0.10, -0.05, 9.6);
     camera.lookAt(0, 0, 0);
+
+    const updateCameraForViewport = () => {
+      if (!container || !renderer || !camera) return;
+      const w = container.clientWidth || 360;
+      const h = container.clientHeight || 440;
+
+      camera.aspect = w / h;
+
+      // Adjust camera distance dynamically so the origami bird and all revolving logos
+      // fit 100% inside the viewport with generous breathing room — ZERO clipping on left or right!
+      if (w < 480) {
+        // Small Mobile: compact height framing, closer to content
+        camera.position.set(0, 0.10, 12.8);
+      } else if (w < 768) {
+        // Large Mobile / Phablet
+        camera.position.set(0.04, 0.05, 11.8);
+      } else if (w < 1024) {
+        // Tablet (768px - 1024px)
+        camera.position.set(0.08, -0.02, 10.8);
+      } else {
+        // Desktop (>= 1024px): exact calibrated perspective
+        camera.position.set(0.10, -0.05, 9.6);
+      }
+
+      camera.updateProjectionMatrix();
+      renderer.setSize(w, h);
+    };
+
+    updateCameraForViewport();
 
     // ── Lighting Setup (Radiant healthcare crystal studio lights) ───
     const ambientLight = new THREE.AmbientLight(0x071526, 2.6);
@@ -166,6 +195,12 @@ export default function HeroBirdVisual() {
               mat.depthWrite = false;
               mat.side = THREE.DoubleSide;
               mat.needsUpdate = true;
+
+              // Scale the logo cards to standard proportion
+              if (!child.geometry.userData._logoScaled) {
+                child.geometry.scale(0.76, 0.76, 0.76);
+                child.geometry.userData._logoScaled = true;
+              }
             } else if (child.name === 'Bird') {
               mat.side = THREE.DoubleSide;
               mat.vertexColors = true;
@@ -339,12 +374,7 @@ export default function HeroBirdVisual() {
 
     // ── Responsive Resize ───────────────────────────────────────────
     const handleResize = () => {
-      if (!container || !renderer || !camera) return;
-      const w = container.clientWidth;
-      const h = container.clientHeight;
-      camera.aspect = w / h;
-      camera.updateProjectionMatrix();
-      renderer.setSize(w, h);
+      updateCameraForViewport();
     };
 
     window.addEventListener('resize', handleResize);
