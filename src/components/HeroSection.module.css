@@ -5,21 +5,21 @@
 .heroSection {
   position: relative;
   width: 100%;
-  min-height: 540px;
+  min-height: 520px;
   background-color: transparent;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 5rem;
-  padding-bottom: 3.5rem;
+  padding-top: 3.75rem;
+  padding-bottom: 2.5rem;
   overflow: visible;
 }
 
 /* ── Responsive Mobile & Tablet Rules ── */
 @media (max-width: 640px) {
   .heroSection {
-    padding-top: 4.75rem;
-    padding-bottom: 2rem;
+    padding-top: 3.25rem;
+    padding-bottom: 1.5rem;
     min-height: auto;
   }
 
@@ -104,23 +104,23 @@
 
 @media (min-width: 640px) {
   .heroSection {
-    min-height: 580px;
-    padding-top: 6rem;
+    min-height: 560px;
+    padding-top: 4.5rem;
   }
 }
 
 @media (min-width: 1024px) {
   .heroSection {
-    min-height: 620px;
-    padding-top: 5rem;
+    min-height: 600px;
+    padding-top: 3.75rem;
     padding-bottom: 2rem;
   }
 }
 
 @media (min-width: 1280px) {
   .heroSection {
-    min-height: 680px;
-    padding-top: 6rem;
+    min-height: 650px;
+    padding-top: 4.5rem;
   }
 }
 

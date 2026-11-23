@@ -19,20 +19,20 @@
     max-width: 100vw;
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
-    height: 310px;
+    height: 350px;
   }
 }
 
 @media (min-width: 641px) and (max-width: 1023px) {
   .birdContainer {
     width: 100%;
-    height: 490px;
+    height: 520px;
   }
 }
 
 @media (min-width: 1024px) {
   .birdContainer {
-    height: 520px;
+    height: 550px;
   }
 }
 

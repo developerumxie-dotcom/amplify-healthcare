@@ -78,17 +78,17 @@ export default function HeroBirdVisual() {
       // Adjust camera distance dynamically so the origami bird and all revolving logos
       // fit 100% inside the viewport with generous breathing room — ZERO clipping on left or right!
       if (w < 480) {
-        // Small Mobile: compact height framing, closer to content
-        camera.position.set(0, 0.10, 12.8);
+        // Small Mobile: compact height framing, closer to content with bold size
+        camera.position.set(0, 0.08, 11.2);
       } else if (w < 768) {
         // Large Mobile / Phablet
-        camera.position.set(0.04, 0.05, 11.8);
+        camera.position.set(0.04, 0.05, 10.4);
       } else if (w < 1024) {
         // Tablet (768px - 1024px)
-        camera.position.set(0.08, -0.02, 10.8);
+        camera.position.set(0.08, -0.02, 9.8);
       } else {
-        // Desktop (>= 1024px): exact calibrated perspective
-        camera.position.set(0.10, -0.05, 9.6);
+        // Desktop (>= 1024px): calibrated perspective with fuller presence
+        camera.position.set(0.10, -0.05, 9.0);
       }
 
       camera.updateProjectionMatrix();
@@ -155,9 +155,9 @@ export default function HeroBirdVisual() {
 
       modelRoot = gltf.scene;
 
-      // Exact same position, scale, and angle
+      // Exact position, scaled slightly larger for prominent hero presence
       modelRoot.position.set(0, 0.20, 0);
-      modelRoot.scale.set(1.0, 1.0, 1.0);
+      modelRoot.scale.set(1.06, 1.06, 1.06);
       modelRoot.rotation.set(0, 0, 0);
 
       // Scale orbits and revolving client logos a bit smaller (~0.85) to hug the bird compactly,
