@@ -26,8 +26,8 @@ export default function App() {
       <PageLoader />
 
       {/* Background Cosmic Starfield / Light Gradients for Hero */}
-      <div className="fixed inset-0 pointer-events-none z-0">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-screen h-[900px] bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(14,165,233,0.16),transparent)]" />
+      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[100vw] h-[900px] bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(14,165,233,0.16),transparent)]" />
       </div>
 
       {/* Main Page Layout Sections — Seamless Single One-Page Continuous Canvas */}
